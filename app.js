@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const config = require('./config/config');
 
-const url = 'mongodb+srv://usuario_admin:usuario_admin@clusterapi.31wkw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const url = config.bd_string;
 
 mongoose.connect(url);
 
